@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FAQ - TS Broadband</title>
+
+  <meta
+    name="description"
+    content="Frequently Asked Questions about TS Broadband Internet Services"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .faq-page {
+      padding: 80px 0;
+    }
+
+    .faq-title {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: red;
+    }
+
+    .faq-subtitle {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #6b7280;
+      font-size: 18px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: white;
+      border: none;
+      padding: 22px 25px;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 600;
+      color: #111827;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: #f3f4f6;
+    }
+
+    .faq-icon {
+      font-size: 24px;
+      color: red;
+      transition: 0.3s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background: #ffffff;
+    }
+
+    .faq-answer p {
+      padding: 0 25px 25px;
+      color: #4b5563;
+      font-size: 16px;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 40px;
+      background: red;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .back-home:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .faq-title {
+        font-size: 32px;
+      }
+
+      .faq-question {
+        font-size: 16px;
+      }
+
+      .faq-answer p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="faq-page">
+    <div class="container">
+
+      <h1 class="faq-title">Frequently Asked Questions</h1>
+
+      <p class="faq-subtitle">
+        Find answers to the most common questions about TS Broadband services.
+      </p>
+
+      <!-- FAQ ITEM -->
+      <div class="faq-item">
+        <button class="faq-question">
+          How long does installation take?
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Installation is usually completed within 24 to 48 hours after confirmation.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you provide unlimited data plans?
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes, all our broadband plans come with unlimited data usage.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Is customer support available 24/7?
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes, our support team is available 24/7 for technical assistance.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM -->
+      <div class="faq-item">
+        <button class="faq-question">
+          What payment methods are accepted?
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            We accept UPI, Debit Cards, Credit Cards, Net Banking, and Cash payments.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Is a router included with the connection?
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes, selected broadband plans include a free Wi-Fi router.
+          </p>
+        </div>
+      </div>
+
+      <a href="index.html" class="back-home">
+        Back to Home
+      </a>
+
+    </div>
+  </section>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
